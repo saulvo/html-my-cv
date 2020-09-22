@@ -378,6 +378,7 @@
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
+    padding: 0 15px;
   }
 }
 
