@@ -460,21 +460,6 @@ img {
   background-color: #fff;
   -webkit-box-shadow: rgba(0, 0, 0, 0.05) 0 0 20px;
           box-shadow: rgba(0, 0, 0, 0.05) 0 0 20px;
-  position: relative;
-}
-
-.wrap::after {
-  content: "";
-  background-color: #eedf14;
-  -webkit-clip-path: polygon(100% 0, 0 0, 100% 100%);
-          clip-path: polygon(100% 0, 0 0, 100% 100%);
-  width: 15rem;
-  height: 6rem;
-  position: absolute;
-  top: 0;
-  left: auto;
-  z-index: 9;
-  right: 0;
 }
 
 .sidebar {
@@ -859,6 +844,20 @@ img {
 @media screen and (min-width: 992px) {
   .wrap {
     margin: 3rem 0;
+    position: relative;
+  }
+  .wrap::after {
+    content: "";
+    background-color: #eedf14;
+    -webkit-clip-path: polygon(100% 0, 0 0, 100% 100%);
+            clip-path: polygon(100% 0, 0 0, 100% 100%);
+    width: 15rem;
+    height: 6rem;
+    position: absolute;
+    top: 0;
+    left: auto;
+    z-index: 9;
+    right: 0;
   }
   .content {
     padding: 3.5rem 3.5rem 0.5rem 0;

@@ -7,6 +7,17 @@
 @media screen and (min-width: 992px) {
    .wrap {
       margin: 3rem 0;
+      position: relative;
+
+      &::after {
+         content: "";
+         background-color: $primary_color;
+         clip-path: polygon(100% 0, 0 0, 100% 100%);
+
+         @include box(15rem, 6rem);
+         @include position(absolute, 0, auto, 9);
+         right: 0;
+      }
    }
    .content {
       padding: 3.5rem 3.5rem 0.5rem 0;

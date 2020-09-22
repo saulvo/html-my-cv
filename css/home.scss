@@ -19,17 +19,6 @@
 .wrap {
    background-color: #fff;
    box-shadow: rgba(#000, 0.05) 0 0 20px;
-   position: relative;
-
-   &::after {
-      content: "";
-      background-color: $primary_color;
-      clip-path: polygon(100% 0, 0 0, 100% 100%);
-
-      @include box(15rem, 6rem);
-      @include position(absolute, 0, auto, 9);
-      right: 0;
-   }
 }
 
 .sidebar {
