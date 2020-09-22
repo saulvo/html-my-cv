@@ -1,2 +1,2 @@
 # code html my cv
-#demo : http://soness.epizy.com/?i=1
+#demo : http://sonvt.epizy.com
