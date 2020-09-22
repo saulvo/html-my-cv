@@ -1,0 +1,40 @@
+@media screen and (min-width: 768px) {
+   .skills__item,
+   .educations__item {
+      width: 50%;
+   }
+}
+@media screen and (min-width: 992px) {
+   .wrap {
+      margin: 3rem 0;
+   }
+   .content {
+      padding: 3.5rem 3.5rem 0.5rem 0;
+   }
+}
+
+@media screen and (max-width: 991px) {
+   .content {
+      padding: 2rem 3rem 2rem 2rem;
+   }
+}
+
+@media screen and (max-width: 360px) {
+   .sidebar {
+      &__about,
+      &__contact {
+         padding: 2rem;
+      }
+   }
+   .content {
+      padding: 2rem;
+   }
+   .experience__item,
+   .skills__item,
+   .educations__item {
+      padding-left: 3rem;
+      &:before {
+         left: 1.5rem;
+      }
+   }
+}

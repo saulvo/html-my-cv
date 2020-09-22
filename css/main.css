@@ -150,11 +150,11 @@
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  margin: 0 -15px;
+  margin: 0 -1.25%;
 }
 
 [class^="col"] {
-  padding: 0 15px;
+  padding: 0 1.25%;
   width: 100%;
 }
 
@@ -370,7 +370,7 @@
 .container {
   max-width: 1140px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 1.25%;
 }
 
 /*********** Responsive ***********/
@@ -458,7 +458,6 @@ img {
 
 .wrap {
   background-color: #fff;
-  margin: 3rem 0;
   -webkit-box-shadow: rgba(0, 0, 0, 0.05) 0 0 20px;
           box-shadow: rgba(0, 0, 0, 0.05) 0 0 20px;
   position: relative;
@@ -554,8 +553,8 @@ img {
 
 .sidebar__contact {
   text-align: center;
-  padding: 2rem;
-  margin-top: 6rem;
+  padding: 3.5rem;
+  margin-top: 5rem;
 }
 
 .sidebar__contact-title {
@@ -640,10 +639,6 @@ img {
           justify-content: center;
 }
 
-.content {
-  padding: 3.5rem 3.5rem 0.5rem 0;
-}
-
 .experience__item {
   margin-bottom: 2rem;
   padding-left: 7.2rem;
@@ -657,7 +652,7 @@ img {
   color: #444;
   position: absolute;
   top: 1.2rem;
-  left: 3.6rem;
+  left: 3.1rem;
   z-index: 9;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -677,6 +672,8 @@ img {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .experience__item-name {
@@ -711,12 +708,14 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .skills__item {
+  width: 100%;
   margin-bottom: 2rem;
   padding-left: 7.2rem;
-  width: 50%;
   position: relative;
 }
 
@@ -802,12 +801,14 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .educations__item {
   margin-bottom: 2rem;
   padding-left: 7.2rem;
-  width: 50%;
+  width: 100%;
   position: relative;
 }
 
@@ -846,4 +847,45 @@ img {
 
 .educations__item-desc {
   font-weight: normal;
+}
+
+@media screen and (min-width: 768px) {
+  .skills__item,
+  .educations__item {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .wrap {
+    margin: 3rem 0;
+  }
+  .content {
+    padding: 3.5rem 3.5rem 0.5rem 0;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .content {
+    padding: 2rem 3rem 2rem 2rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .sidebar__about, .sidebar__contact {
+    padding: 2rem;
+  }
+  .content {
+    padding: 2rem;
+  }
+  .experience__item,
+  .skills__item,
+  .educations__item {
+    padding-left: 3rem;
+  }
+  .experience__item:before,
+  .skills__item:before,
+  .educations__item:before {
+    left: 1.5rem;
+  }
 }
